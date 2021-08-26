@@ -7,7 +7,7 @@ import { UserSelectScreenComponent } from './user-select-screen/user-select-scre
 const routes: Routes = [
   { path: 'favorite', component: FavoriteScreenComponent },
   { path: 'movie-swipe', component: MovieSwipeScreenComponent },
-  { path: '', component: UserSelectScreenComponent }
+  { path: 'user-select', component: UserSelectScreenComponent }
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'movie-swipe-screen',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styles: ['']
 })
 export class MovieSwipeScreenComponent {
-  
+  selectedUser?: string;
+
+  constructor(private dataService: DataService) {
+    this.selectedUser = this.dataService.selectedUser;
+  }
 }

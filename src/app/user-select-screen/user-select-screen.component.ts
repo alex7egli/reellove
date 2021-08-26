@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'user-select-screen',
@@ -7,10 +8,11 @@ import { Router } from '@angular/router';
   styles: ['']
 })
 export class UserSelectScreenComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router,
+    private dataService: DataService) {}
 
   userSelect(userSelected: string) {
-    alert(`user selected ${userSelected}`);
+    this.dataService.selectedUser = userSelected;
     this.router.navigate(['movie-swipe']);
   }
 }

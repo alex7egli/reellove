@@ -20,6 +20,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   }
 }
 
+button.active {
+  background: hotpink;
+  color: white;
+}
+
 .screen {
   width: 700px;
   margin: auto;
