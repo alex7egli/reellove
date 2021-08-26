@@ -8,7 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'reellove';
 
-  userSelect(userSelected: string) {
-    alert(`user selected ${userSelected}`);
-  }
+  
 }
