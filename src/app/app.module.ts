@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MovieSwipeScreenComponent } from './movie-swipe-screen/movie-swipe-screen.component';
 import { UserSelectScreenComponent } from './user-select-screen/user-select-screen.component';
+import { FavoriteScreenComponent } from './favorite-screen/favorite-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieSwipeScreenComponent,
-    UserSelectScreenComponent
+    UserSelectScreenComponent,
+    FavoriteScreenComponent
   ],
   imports: [
     BrowserModule,
