@@ -11,8 +11,8 @@ export class UserSelectScreenComponent {
   constructor(private router: Router,
     private dataService: DataService) {}
 
-  userSelect(userSelected: string) {
-    this.dataService.selectedUser = userSelected;
+  userSelect(userIndex: number) {
+    this.dataService.selectedUser = this.dataService.users[userIndex];
     this.router.navigate(['movie-swipe']);
   }
 }

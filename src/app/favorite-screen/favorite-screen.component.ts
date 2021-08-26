@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from '../services/data.service';
+import { DataService, IUser } from '../services/data.service';
 
 @Component({
   selector: 'favorite-screen',
@@ -7,9 +7,12 @@ import { DataService } from '../services/data.service';
   styles: ['']
 })
 export class FavoriteScreenComponent {
+  selectedUser: IUser = this.dataService.users[0];
   likedMovies: Array<string> = [];
 
   constructor(private dataService: DataService) {
+    this.selectedUser = this.dataService.selectedUser;
+
     for(let movieName in this.dataService.likedMoviesByUserId['user1']) {
       if (this.dataService.likedMoviesByUserId['user2'][movieName]) {
         this.likedMovies.push(movieName);

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from '../services/data.service';
+import { DataService, IUser } from '../services/data.service';
 
 @Component({
   selector: 'movie-swipe-screen',
@@ -7,7 +7,7 @@ import { DataService } from '../services/data.service';
   styles: ['']
 })
 export class MovieSwipeScreenComponent {
-  selectedUser: string = 'user1';
+  selectedUser: IUser = this.dataService.users[0];
   movie?: any;
 
   constructor(private dataService: DataService) {
@@ -16,12 +16,13 @@ export class MovieSwipeScreenComponent {
   }
 
   pickRandomMovie() {
-    const randInt = Math.floor(Math.random() * this.dataService.moviesList.length);
+    const randInt = this.dataService.randomIndices[this.selectedUser.indexInMovieList];
     this.movie = this.dataService.moviesList[randInt];
   }
 
   movieSelect(didLike: boolean) {
-    this.dataService.likedMoviesByUserId[this.selectedUser][this.movie.name] = didLike;
+    this.dataService.likedMoviesByUserId[this.selectedUser.id][this.movie.name] = didLike;
+    this.dataService.incrementRandomInt(this.selectedUser);
     this.pickRandomMovie();
   }
 }

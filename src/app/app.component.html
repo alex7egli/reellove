@@ -1,15 +1,17 @@
-<router-outlet></router-outlet>
+<div class="container">
+  <router-outlet></router-outlet>
 
-<div>
-    <button 
-    routerLink="/user-select" routerLinkActive="active">Switch User
+  <div class="nav-buttons">
+    <button routerLink="/user-select"
+            routerLinkActive="active">Switch User
     </button>
-    
-    <button 
-    routerLink="/movie-swipe" routerLinkActive="active">Match
+
+    <button routerLink="/movie-swipe"
+            routerLinkActive="active">Match
     </button>
-    
-    <button 
-    routerLink="/favorite" routerLinkActive="active">Favorites
+
+    <button routerLink="/favorite"
+            routerLinkActive="active">Favorites
     </button>
+  </div>
 </div>

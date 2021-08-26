@@ -1,16 +1,16 @@
 <div class="screen">
-  <h1>Movie Swipe Screen</h1>
-
-  <div class="selected-user">{{selectedUser}}</div>
+  <h1>{{selectedUser.name}}</h1>
 
   <img [src]="movie.imageUrl"/>
 
   <div class="like-button-container">
-    <button (click)="movieSelect(true)">
+    <button (click)="movieSelect(true)"
+    style="background-color: green; border: green; color: white;">
       Yes
     </button>
 
-    <button (click)="movieSelect(false)">
+    <button (click)="movieSelect(false)"
+    style="background-color: red; border: red; color: white;">
       No
     </button>
   </div>

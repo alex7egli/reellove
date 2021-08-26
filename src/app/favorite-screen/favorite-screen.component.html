@@ -1,5 +1,7 @@
 <div class="screen">
-    <h1>Favorite Screen</h1>
+  <h1>{{selectedUser.name}}</h1>
   
-    <div *ngFor="let movie of likedMovies">{{movie}}</div>
-  </div>
+  <h2>You both like:</h2>
+  <div *ngFor="let movie of likedMovies">{{movie}}</div>
+  <div *ngIf="likedMovies.length === 0">Absolutely nothing! You're a terrible match!</div>
+</div>

@@ -2,6 +2,55 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+.container {
+  width: 700px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  background: lightpink;
+
+  user-select-screen,
+  movie-swipe-screen,
+  favorite-screen {
+    flex: 1;
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 5px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  button {
+    background: #dddddd;
+    color: black;
+    border: #dddddd;
+
+    &.active {
+      background: hotpink;
+      border: hotpink;
+      color: white;
+    }
+  }
+}
 .button-container {
   height: 50vh;
   display: flex;
@@ -11,24 +60,20 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
   button {
     margin: 5vh;
-    padding: 1em;
     background: hotpink;
     color: white;
     font-weight: bold;
     font-size: 1.2em;
-    border-radius: 5px;
   }
 }
 
-button.active {
-  background: hotpink;
-  color: white;
-}
-
 .screen {
-  width: 700px;
   margin: auto;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .selected-user {
@@ -41,4 +86,8 @@ button.active {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+img {
+  height: 50vh;
 }
