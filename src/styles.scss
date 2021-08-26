@@ -28,4 +28,17 @@ button.active {
 .screen {
   width: 700px;
   margin: auto;
+  position: relative;
+}
+
+.selected-user {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.like-button-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
